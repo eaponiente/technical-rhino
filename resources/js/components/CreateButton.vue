@@ -9,9 +9,9 @@ function createNew() {
 
 <template>
     <div class="flex justify-end mb-4">
-        
+
 
         <Button label="Create New" @click="createNew" />
-        
+
     </div>
 </template>
