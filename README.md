@@ -1,12 +1,11 @@
-## INSTALLATION
 
-Tech Stack Used:
-Laravel
-Vue JS
-Tailwind CSS
-Inertia
+## Tech Stack Used:
+- Laravel
+- Vue JS
+- Tailwind CSS
+- Inertia
 
-Steps 
+## INSTALLATION 
 
 - `composer install`
 - `php artisan key:generate`
@@ -15,3 +14,9 @@ Steps
 - `php artisan migrate:fresh --seed`
 - `npm install`
 - `composer run dev`
+
+
+## TESTING
+RUN
+
+- `php artisan test`
