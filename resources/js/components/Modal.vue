@@ -14,7 +14,6 @@ const deleteMedia = () => {
     emit('deleteMedia', props.selectedMedia);
 }
 
-
 </script>
 
 <template>
