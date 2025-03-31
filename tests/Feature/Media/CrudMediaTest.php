@@ -78,13 +78,14 @@ it('fails validation when tags contain non-existent IDs', function () {
 });
 
 
-it('deletes an existing media item and redirects to the media index page', function () {
+it('soft deletes an existing media item and redirects to the media index page', function () {
     $media = Media::factory()->create();
 
-    // Make a DELETE request to delete the media item
+    // Make a DELETE request to soft delete the media item
     $response = $this->delete(route('media.destroy', ['media' => $media->id]));
 
     // Check redirection and database state
     $response->assertRedirect(route('media.index')); // Ensure redirection
-    $this->assertDatabaseMissing('media', ['id' => $media->id]); // Ensure media is deleted
+    $this->assertSoftDeleted('media', ['id' => $media->id]); // Ensure media is soft deleted
 });
+
